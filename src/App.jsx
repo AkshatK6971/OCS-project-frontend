@@ -13,7 +13,7 @@ function App() {
     let password = event.target.parentNode.children[1].children[1].value;
     let hash = MD5(password).toString();
 
-    let result = await fetch("http://localhost:3000/validate", {
+    let result = await fetch("https://ocs-project-backend.vercel.app/validate", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
